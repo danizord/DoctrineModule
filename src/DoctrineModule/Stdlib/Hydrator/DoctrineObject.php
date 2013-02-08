@@ -28,6 +28,7 @@ use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\Persistence\ObjectRepository;
 use Doctrine\Common\Persistence\Mapping\ClassMetadata;
 use Zend\Stdlib\Hydrator\AbstractHydrator;
+use Zend\Stdlib\Hydrator\HydratorInterface;
 use Zend\Stdlib\Hydrator\Strategy\StrategyInterface;
 
 /**
@@ -43,7 +44,7 @@ use Zend\Stdlib\Hydrator\Strategy\StrategyInterface;
  * @since   0.7.0
  * @author  Michael Gallego <mic.gallego@gmail.com>
  */
-class DoctrineObject extends AbstractHydrator
+class DoctrineObject extends AbstractHydrator implements HydratorInterface
 {
     /**
      * @var ObjectManager
