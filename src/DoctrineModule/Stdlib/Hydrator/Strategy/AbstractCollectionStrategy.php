@@ -105,7 +105,10 @@ abstract class AbstractCollectionStrategy implements StrategyInterface
     {
         if (!is_object($object)) {
             throw new InvalidArgumentException(
-                sprintf('The parameter given to setObject method of %s class is not an object', get_called_class())
+                sprintf(
+                    'The parameter given to setObject method of %s class is not an object',
+                    get_called_class()
+                )
             );
         }
 
